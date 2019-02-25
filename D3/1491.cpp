@@ -51,7 +51,7 @@ int main()
         }
 
         cnt++;
-        printf("#%d %d\n", cnt, min);
+        printf("#%d %lld\n", cnt, min);
     }
 
     return 0;
