@@ -17,10 +17,10 @@ int main()
         int n;
         cin >> n;
 
-        int start = 'A'- 1;
-
+    
+        int alphabet[26] = { 0, };
         int ncnt = 0;
-        int nresult = 0;
+
         while (1)
         {
             if (ncnt == n)
@@ -29,19 +29,17 @@ int main()
             char str[31];
             cin >> str;
 
-            if ((int)(str[0])-1 != start)
-            {
-                
-            }
-            else
-            {
-                start++;
-                nresult++;
-            }
-
+            alphabet[ str[0] - 'A' ] = 1;
             ncnt++;          
         }
         
+        int nresult = 0;
+        for (nresult = 0; nresult < 26; nresult++)
+        {
+            if (alphabet[nresult] == 0)
+                break;
+        }
+
         cnt++;
         printf("#%d %d\n", cnt, nresult);
     }
